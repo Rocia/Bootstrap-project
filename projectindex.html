@@ -1,10 +1,11 @@
+
 <html>
 <head>
-<title>Panels in Bootstrap
+<title>Project in Bootstrap
 </title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel = "stylesheet" href = "../css/bootstrap.min.css">
+<link rel = "stylesheet" href = "css/bootstrap.min.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top navclass" id="main-navbar" role="navigation">
@@ -21,9 +22,9 @@
 	<div class="collapse navbar-collapse" id="nav">
 	<ul class= "nav navbar-nav">
 	<li><a href ="#">Product Name</a></li>
-	<li><a href ="#">Testimonials</a></li>
-	<li><a href ="#">Features</a></li>
-	<li><a href ="#">Gallery</a></li>
+	<li><a href ="#testimonials">Testimonials</a></li>
+	<li><a href ="#features">Features</a></li>
+	<li><a href ="#gallery">Gallery</a></li>
 	<li><a href ="#">FAQ</a></li>
 	<li><a href ="#">Contact</a></li>
 	</ul>  
@@ -42,27 +43,62 @@
 </div>
 </div>
 </div>
-<div class="container-fluid">
-<h2> Testimonials</h2><cite>This is what our customers are saying about us</cite>
-<span class = "align-right">
+<div class="container-fluid" id = "testimonials">
+<h2> Testimonials</h2><cite title="source-title">This is what our customers are saying about us</cite>
+<div class= "row">
+<div class = "col-sm-6 col-md-4 col-lg-4">
 <blockquote class="blockquote">
   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
-<span class = "align-center">
-<blockquote class="blockquote">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
-<span class = "align-left">
-<blockquote class="blockquote">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
-</span>
 </div>
+<div class = "col-sm-6 col-md-4 col-lg-4">
+<blockquote class="blockquote">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+</div>
+<div class = "col-sm-6 col-md-4 col-lg-4">
+<blockquote class="blockquote">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+</div>
+</div>
+</div>
+<div class= "container-fluid" id ="features">
+<h2> Features.</h2><cite title="source-title">What it's all about!</cite>
+<div class = "row">
+<div class = "col-sm-6 col-md-8 col-lg-8">
+<h4>This is a feature title</h4>
+<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</div>
+<div class = "col-sm-6 col-md-4 col-lg-4">
+<img src = "images/prod1.jpg">
+</div>
+<div class = "col-sm-6 col-md-8 col-lg-8">
+<h4>This is a feature title</h4>
+<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</div>
+<div class = "col-sm-6 col-md-4 col-lg-4">
+<img src = "images/prod2.jpg">
+</div>
+<div class = "col-sm-6 col-md-8 col-lg-8">
+<h4>This is a feature title</h4>
+<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</div>
+<div class = "col-sm-6 col-md-4 col-lg-4">
+<img src = "images/prod1.jpg" style = "height:200px; width = 200px">
+</div>
+</div>
+</div>
+<div class= "container-fluid" id ="gallery">
 
+</div>
+<div class= "container-fluid" id ="faq">
 
+</div>
+<div class= "container-fluid" id ="contact">
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
