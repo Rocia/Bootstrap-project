@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>XML Cite
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = "stylesheet" href = "css/bootstrap.min.css">
+<!--<style> .product{display:none;}</style>-->
+<script>
+function hideSec1() {
+    $('.product').hide();
+}
+function validate(evt) {
+  var theEvent = evt || window.event;
+  var key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode( key );
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+</script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top navclass" id="main-navbar" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only"> Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div> <!-- end navbar header-->
+
+	<div class="collapse navbar-collapse" id="nav">
+	<ul class= "nav navbar-nav">
+	<li>
+	<a href ="#"><span class = "glyphicon glyphicon-home"></span></a>
+	</li>
+	</ul>  
+	<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" style = "position:absolute;top:5;right:15;" >LOGIN</button>
+	</div>
+    </div> <!-- end container-->
+  </nav> <!-- End of navigation -->
+<div class= "container-fluid">
+<div class = "jumbotron text-center">
+<p>Insert logo carousel here</div>
+</div>
+</div>
+<section class = "product" >
+<div class = "container-fluid" id = "rec">
+<div class = "row">
+<div class="col-xs-12  col-sm-offset-3 col-sm-6  col-md-offset-4 col-md-4 col-md-offset-4 col-lg-4">
+ <form class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="product">Product:</label>
+    <div class="col-sm-10">
+       <div class="dropdown">
+	  <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Select Product
+	  <span class="caret"></span></button>
+	  <ul class="dropdown-menu">
+	  	<li><a href="#">LEND</a></li>
+		<li><a href="#">FPLG</a></li>
+		<li><a href="#">BG</a></li>
+		<li><a href="#">BUY</a></li>
+		<li><a href="#">SBLR</a></li>
+		<li><a href="#">ADD</a></li>
+		<li><a href="#">EPG</a></li>
+		<li><a href="#">SAFE</a></li>
+		<li><a href="#">ADLG</a></li>
+		<li><a href="#">FRAN</a></li>
+		<li><a href="#">RICO</a></li>
+		<li><a href="#">MARK</a></li>
+		<li><a href="#">RITE</a></li>
+		<li><a href="#">FLR</a></li>
+		<li><a href="#">FSLR</a></li>
+		<li><a href="#">FUND</a></li>
+		<li><a href="#">SBS</a></li>
+	  </ul>
+	</div> 
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Report:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="report" placeholder="Enter report number" onkeypress='validate(event)' >
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form> 
+</div>
+</div>
+</div>
+</section>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">LOGIN</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+		<div class="form-group">
+			<label for="username">USERNAME:</label>
+			<input type="text" class="form-control" id="uname" placeholder="Enter Username">
+		</div>
+		<div class="form-group">
+			<label for="pwd">PASSWORD:</label>
+			<input type="password" class="form-control" id="pwd" placeholder="Enter Password">
+		</div>
+		<div class="checkbox">
+			<label><input type="checkbox"> Remember me</label>
+		</div>
+	</form>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="login btn btn-default" data-dismiss="modal">Login</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+onload="hideSec1()"
+$('.login').click(function() { $('.product').show(); })
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+</body>
+</html>
