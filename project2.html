@@ -6,6 +6,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel = "stylesheet" href = "css/bootstrap.min.css">
 <!--<style> .product{display:none;}</style>-->
+<HTA:APPLICATION ID="oMyApp" 
+
+	    APPLICATIONNAME="Application Executer" 
+
+	    BORDER="no"
+
+	    CAPTION="no"
+
+	    SHOWINTASKBAR="yes"
+
+	    SINGLEINSTANCE="yes"
+
+	    SYSMENU="yes"
+
+	    SCROLL="no"
+
+	    WINDOWSTATE="normal">
+    <script type="text/javascript" language="javascript">
+        function RunFile() {
+		WshShell = new ActiveXObject("WScript.Shell");
+		WshShell.Run("c:/windows/system32/notepad.exe", 1, false);
+        }
+    </script>
 <script>
 function hideSec1() {
     $('.product').hide();
@@ -21,9 +44,19 @@ function validate(evt) {
   }
 }
 </script>
+<script src="Scripts/angular.min.js">
+</script>     
+<script src="Scripts/Script.js">
+</script> 
 </head>
 
-<body>
+<body  ng-app="myModule">     
+<div> 
+  10+20 = {{10 + 20}}  
+ </div> 
+ <div> 
+  40+10 ={{40+10}} 
+</div> 
 <nav class="navbar navbar-inverse navbar-fixed-top navclass" id="main-navbar" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -41,7 +74,7 @@ function validate(evt) {
 	<a href ="#"><span class = "glyphicon glyphicon-home"></span></a>
 	</li>
 	</ul>  
-	<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" style = "position:absolute;top:5;right:15;" >LOGIN</button>
+	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" style = "position:absolute;top:7.5;right:15;" >LOGIN</button>
 	</div>
     </div> <!-- end container-->
   </nav> <!-- End of navigation -->
@@ -50,7 +83,7 @@ function validate(evt) {
 <p>Insert logo carousel here</div>
 </div>
 </div>
-<section class = "product" >
+<section class = "product" id = "product">
 <div class = "container-fluid" id = "rec">
 <div class = "row">
 <div class="col-xs-12  col-sm-offset-3 col-sm-6  col-md-offset-4 col-md-4 col-md-offset-4 col-lg-4">
@@ -84,26 +117,64 @@ function validate(evt) {
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Report:</label>
+    <label class="control-label col-sm-2" for="report">Report:</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" id="report" placeholder="Enter report number" onkeypress='validate(event)' >
     </div>
   </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <div class="checkbox">
-        <label><input type="checkbox"> Remember me</label>
-      </div>
+<!--
+<div class="form-group">
+    <label class="control-label col-sm-2" for="report">XML:</label>
+    <div class="col-sm-10">
+      <div class="dropdown">
+	  <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Select XML file
+	  <span class="caret"></span></button>
+	  <ul class="dropdown-menu">
+	<li><a href = "">
+   	</ul>
+	</div> 
     </div>
   </div>
-  <div class="form-group">
+-->
+  <div class="form-group text-center">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" class="btn btn-default" value="Run Exe" onclick="RunFile();"/>>Submit</button>
     </div>
   </div>
 </form> 
 </div>
 </div>
+</div>
+</section>
+<section class= "table">
+<div class = "container-fluid">
+<table class="table">
+<thead>
+<tr class="active">
+<th>Product</th>
+<th>XML</th>
+<th>Headnote</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="success">
+<td>1</td>
+<td>Google</td>
+<td>google@gmail.com</td>
+</tr>
+<tr class="danger">
+<td>2</td>
+<td>facebook</td>
+<td>facebook@fb.com</td>
+</tr>
+<tr >
+<td class="info">3</td>
+<td class="warning">twitter</td>
+<td>twitter@tweet.com</td>
+</tr>
+</tbody>
+</table>
 </div>
 </section>
 <!-- Modal -->
